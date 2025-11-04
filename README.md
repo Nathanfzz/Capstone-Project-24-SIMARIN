@@ -125,6 +125,14 @@ Aplikasi ini dikembangkan menggunakan prinsip Object-Oriented Programming (OOP) 
 
 1. Encapsulation
 
+Encapsulation adalah konsep OOP yang menyembunyikan data dengan membuat atribut private dan memberikan akses melalui metode getter dan setter. Ini bertujuan untuk:
+
+Mengontrol akses: Membatasi akses langsung ke data dan memastikan perubahan data dilakukan dengan cara yang benar.
+
+Keamanan data: Mencegah modifikasi langsung yang dapat merusak data.
+
+Fleksibilitas: Memungkinkan perubahan implementasi internal tanpa mempengaruhi bagian lain dari program.
+
 User.java
 
  package model;
@@ -170,7 +178,24 @@ public abstract class User {
 
 2. Inhertance
 
-   User.java
+   Di Object-Oriented Programming (OOP), Inheritance atau pewarisan memungkinkan kita untuk membuat kelas turunan (subclass) yang mewarisi sifat (atribut dan metode) dari kelas induk (superclass). Di sini, User
+
+   adalah kelas induk dan Petugas serta Masyarakat adalah kelas turunan yang mewarisi sifat dari User.
+
+
+a. Kelas User (Superclass)
+
+Kelas User adalah kelas induk (superclass) yang mendefinisikan atribut dasar dan konstruktor umum yang digunakan oleh kelas turunan seperti Petugas dan Masyarakat. Kelas ini juga memiliki metode getter/setter untuk mengakses dan mengubah atribut.
+
+Fitur utama dari kelas User:
+
+Memiliki atribut private untuk menjaga enkapsulasi.
+
+Memiliki konstruktor untuk menginisialisasi data.
+
+Metode getter/setter untuk masing-masing atribut, agar bisa diakses atau diubah.
+
+Metode abstrak getId_user() yang harus diimplementasikan oleh kelas turunan.
 
    package model;
 
@@ -212,8 +237,22 @@ public abstract class User {
     public abstract int getId_user();
 }
 
+  - Abstrak: getId_user() adalah metode abstrak yang wajib diimplementasikan di kelas turunan Petugas dan Masyarakat.
 
-Petugas.java
+
+b. Kelas Petugas (Subclass dari User)
+
+Kelas Petugas adalah kelas turunan yang mewarisi semua atribut dan metode dari User. Di sini, kita menambahkan atribut baru yang spesifik untuk Petugas, seperti idPetugas dan jabatan.
+
+Fitur utama dari kelas Petugas:
+
+- Mewarisi atribut dari User: idUser, namaUser, password, dll.
+
+- Menambahkan atribut baru: idPetugas dan jabatan.
+
+- Konstruktor untuk menginisialisasi atribut-atribut.
+
+- Getter dan Setter untuk mengakses dan mengubah atribut idPetugas dan jabatan.
 
 package model;
 
@@ -230,8 +269,24 @@ public abstract class Petugas extends User {
     public void setJabatan(String jabatan) { this.jabatan = jabatan; }
 }
 
+  - Pewarisan: Petugas mewarisi atribut dan metode dari User (seperti idUser, namaUser, dll).
 
-masyarakat.java
+  - Konstruktor: Konstruktor Petugas tidak perlu mendeklarasikan atribut idUser, namaUser, dll, karena sudah diwarisi dari User.
+
+
+c. Kelas Masyarakat (Subclass dari User)
+
+Kelas Masyarakat adalah kelas turunan lainnya yang juga mewarisi semua atribut dan metode dari User. Di sini, kita menambahkan atribut spesifik untuk Masyarakat, seperti nik dan email.
+
+Fitur utama dari kelas Masyarakat:
+
+  - Mewarisi atribut dari User: idUser, namaUser, password, dll.
+
+  - Menambahkan atribut baru: nik dan email.
+
+  - Konstruktor untuk menginisialisasi atribut-atribut.
+
+  - Getter dan Setter untuk mengakses dan mengubah atribut nik dan email.
 
 package model;
 
@@ -253,9 +308,21 @@ public abstract class Masyarakat extends User {
     public void setEmail(String email) { this.email = email; }
 }
 
+  - Pewarisan: Masyarakat mewarisi atribut dan metode dari User (seperti idUser, namaUser, dll).
 
+  - Konstruktor: Konstruktor Masyarakat memiliki atribut nik dan email yang diinisialisasi saat objek dibuat.
 
 3. Abstracttiob
+
+Dalam Object-Oriented Programming (OOP), Abstraction adalah proses menyembunyikan detail implementasi internal dan hanya menunjukkan fungsi atau operasi yang penting kepada pengguna. Dengan abstraksi, Anda hanya mendeklarasikan antarmuka (interface) yang perlu diimplementasikan oleh kelas lain, sementara implementasi detailnya disembunyikan.
+
+Abstraksi di Kelas User:
+
+Pada kelas User, kita menerapkan konsep abstraksi dengan cara mendeklarasikan metode abstrak getId_user(). Metode ini tidak memiliki implementasi di kelas User, tetapi wajib diimplementasikan di kelas turunan seperti Petugas dan Masyarakat.
+
+Apa itu Metode Abstrak?
+
+Metode abstrak adalah metode yang hanya dideklarasikan tanpa ada implementasi (badan metode). Kelas yang mengandung metode abstrak harus dideklarasikan sebagai kelas abstrak. Kelas turunan dari kelas abstrak ini wajib mengimplementasikan metode abstrak tersebut.
 
    User.java
 
@@ -301,6 +368,8 @@ public abstract class User {
 
 
 4. Polymorphism
+
+  Polimorfisme memungkinkan kita untuk mendefinisikan metode yang sama di kelas induk, namun dengan implementasi berbeda di kelas turunan.
 
   Laporan.java
 
@@ -550,16 +619,90 @@ Ringkasan:
 
 # *Struktur Folder/Package*
 
-<img width="348" height="897" alt="image" src="https://github.com/user-attachments/assets/b0378691-e4d9-4fe5-a07f-18df93504fd4" />
+<img width="342" height="909" alt="image" src="https://github.com/user-attachments/assets/c7c2ec27-afaa-4a7f-b042-517dace2d0cc" />
 
-<img width="274" height="315" alt="image" src="https://github.com/user-attachments/assets/d4eee1ab-d08a-4b39-8f1e-1d34e00ea69a" />
+<img width="305" height="323" alt="image" src="https://github.com/user-attachments/assets/b60435c9-7ebf-4109-ada9-6e6c547b28d6" />
+
+<img width="351" height="648" alt="image" src="https://github.com/user-attachments/assets/26733017-62e0-409f-aa1f-13654cdff739" />
+
+<img width="370" height="512" alt="image" src="https://github.com/user-attachments/assets/f42ce5d0-ed1f-45b9-b04b-109f5b73f838" />
 
 
-<img width="336" height="626" alt="image" src="https://github.com/user-attachments/assets/0560e187-cbc8-45d2-8371-38654893e0c2" />
 
-<img width="357" height="481" alt="image" src="https://github.com/user-attachments/assets/e7acb085-4fdc-4525-86d2-ab3a956b5270" />
-
-
+PROJEK_AKHIR/
+│
+├── **com.mycompany.project_akhir/**
+│   ├── **image/**
+│   │   ├── BUATLAPORAN.jpg
+│   │   ├── Buatlaporanlokasilaut.jpg
+│   │   ├── Buatlaporantindaklanjut.jpg
+│   │   ├── CAPSTONE.jpg
+│   │   ├── CariAKUNN.jpg
+│   │   ├── CariTindaklanjut_1.jpg
+│   │   ├── Carilaporanpenangkapan.jpg
+│   │   ├── Carilaporanpencemaran.jpg
+│   │   ├── HapusLaporanPenangkapan.jpg
+│   │   ├── HapusLaporanPencemaran.jpg
+│   │   └── ... (dan file gambar lainnya)
+│   │
+│   ├── **GUI/**
+│   │   ├── BUATLAPORAN.java
+│   │   ├── BUATLAPORANLOKASILAUT.java
+│   │   ├── BUATLAPORANLOKASILAUT_1.java
+│   │   ├── BUATLAPORANTINDAKLANJUT.java
+│   │   ├── BuatLaporanPenangkapanikan.java
+│   │   ├── BuatLaporanPenangkapanikan_1.java
+│   │   ├── BuatLaporanPencemaranLaut.java
+│   │   ├── BuatLaporanPencemaranLaut_1.java
+│   │   ├── CariAkun.java
+│   │   ├── CariLaporanPenangkapan1.java
+│   │   ├── Caritindaklanjut.java
+│   │   ├── HapusAkunAdmin.java
+│   │   ├── HapusLaporanPenangkapan.java
+│   │   ├── HapusLaporanPencemaran.java
+│   │   ├── JenisLaporan_A.java
+│   │   ├── JenisLaporan_U.java
+│   │   ├── LOGIN.java
+│   │   ├── LihatLaporanLokasi_2_1_1.java
+│   │   ├── LihatLaporanPenangkapan.java
+│   │   ├── LihatLaporanPencemaran.java
+│   │   ├── MenuAdmin.java
+│   │   ├── MenuMasyarakat.java
+│   │   ├── PerbaruiLaporanPenangkapan.java
+│   │   ├── PerbaruiLaporanPencemaran.java
+│   │   ├── PilihMenu.java
+│   │   ├── PilihMenu4_1_1a.java
+│   │   ├── PilihMenuHapus.java
+│   │   ├── PilihMenuLihat.java
+│   │   ├── PilihMenuCari.java
+│   │   ├── Signin.java
+│   │   ├── WELCOME.java
+│   │   └── PerbaruiStatus.java
+│   │
+│   ├── **main/**
+│   │   ├── Main.java
+│   │
+│   ├── **model/**
+│   │   ├── Laporan.java
+│   │   ├── LaporanInterface.java
+│   │   ├── LaporanPenangkapanIkan.java
+│   │   ├── LaporanPencemaran.java
+│   │   ├── LokasiLaut.java
+│   │   ├── Masyarakat.java
+│   │   ├── Petugas.java
+│   │   ├── TindakLanjut.java
+│   │   └── User.java
+│   │
+│   ├── **service/**
+│   │   ├── DatabaseConnection.java
+│   │   ├── LaporanService.java
+│   │   ├── LokasiLautService.java
+│   │   ├── TindakLanjutService.java
+│   │   └── UserService.java
+│   │
+├── **Test Packages**/
+├── **Libraries**/
+└── **Test Libraries**/
 
 
 --------------------------
