@@ -392,7 +392,7 @@ public class Laporan {
 
 --------------------------
 
-##### *Cara Menggunakan Program* 
+# *Cara Menggunakan Program* 
 
 Cara Menggunakan Program (Menu Masyarakat)
 
