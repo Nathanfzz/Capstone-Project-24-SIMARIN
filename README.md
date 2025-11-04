@@ -231,90 +231,67 @@ Akan muncul tabel dan isi dari pencemaran laut
 
 Jika memilih Penangkapan Ikan
 
-Setelah memilih Pencemaran Laut 
+<img width="1496" height="780" alt="image" src="https://github.com/user-attachments/assets/03cf8fa2-8104-4f52-8948-42428399883b" />
 
-✅ 3. Cari Laporan
+Akan muncul tabel dan isi dari penangkapan ikan
 
--
+3. Cari Laporan
 
 Pengguna dapat mencari laporan berdasarkan jenisnya:
+
+<img width="1491" height="775" alt="image" src="https://github.com/user-attachments/assets/ed46a944-25c7-45e4-8aa7-98790836a4c6" />
+
 
 Cari laporan pencemaran laut
 
 Cari laporan penangkapan ikan ilegal
 
-Pengguna diminta memasukkan ID Laporan, lalu sistem menampilkan data laporan dalam bentuk tabel.
+- Jika memilih pencemaran laut 
 
-✅ 4. Perbarui Laporan
+<img width="1494" height="780" alt="image" src="https://github.com/user-attachments/assets/e8750741-89b2-4469-b51d-08b09b68b7c1" />
+
+Masukkan ID laporan untuk mencari laporan tersebut lalu klik Serrch
+
+<img width="523" height="313" alt="image" src="https://github.com/user-attachments/assets/f6c6453a-75de-4b7d-8cdb-a40a3e9e26a5" />
+
+Lalu akan menampilkan laporan yang dicari
+
+
+- Jika memilih penangkapan ikan
+
+<img width="1494" height="779" alt="image" src="https://github.com/user-attachments/assets/ca05e4bc-6964-4080-839c-09ff4fe01e6e" />
+
+
+Masukkan ID laporan untuk mencari laporan tersebut lalu klik Serrch
+
+<img width="370" height="334" alt="image" src="https://github.com/user-attachments/assets/8d2b8907-2cf2-40e5-b6e6-563247aa50a8" />
+
+
+Lalu akan menampilkan laporan yang dicari
+
+
+4. Perbarui Laporan
 
 Pengguna dapat memperbarui data sesuai jenis laporan:
 
-➤ Perbarui Laporan Penangkapan Ikan
+<img width="1491" height="778" alt="image" src="https://github.com/user-attachments/assets/bb7ebb2e-4fe0-4f1a-bff8-9d2851318305" />
 
--
+Jika memilih Pencemaran Laut
 
-Input ulang:
-
-ID laporan
-
-Jenis kapal
-
-Alat tangkap
-
-Zona penangkapan
-
-Pelanggaran
-
-
-➤ Perbarui Laporan Pencemaran Laut
-
--
-
-Input ulang:
-
-ID laporan
-
-Jenis limbah
-
-Sumber limbah
-
-Tingkat pencemaran
-
-
-➤ Perbarui Tindak Lanjut
-
--
-
-Masukkan ID laporan
-
-Data lama muncul dalam tabel
-
-Perbarui data sesuai form
-
-
-➤ Perbarui Lokasi Laut
-
--
-
-Masukkan ID lokasi
-
-Data lama tampil
-
-Pengguna memperbarui sesuai kebutuhan
-
-
-✅ 5. Hapus Laporan
+5. Hapus Laporan
 
 Untuk menghapus laporan:
 
-Pilih jenis laporan
--
+<img width="1491" height="778" alt="image" src="https://github.com/user-attachments/assets/7589b047-d4cf-4769-b29f-1b258c300bbe" />
 
-Masukkan ID laporan
+Ada pilihan Hapus Akun Atau laporan
+
+
+
+Pilih jenis laporan
+
+
 -
 
 Sistem menghapus data laporan tersebut
 
-✅ 6. Logout
-
-Keluar dari aplikasi dan kembali ke halaman login.
