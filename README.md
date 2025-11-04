@@ -125,15 +125,231 @@ Aplikasi ini dikembangkan menggunakan prinsip Object-Oriented Programming (OOP) 
 
 1. Encapsulation
 
+User.java
+
+ package model;
+
+public abstract class User {
+    private int idUser;
+    private String namaUser;
+    private String password;
+    private String peran;
+    private String noHp;
+
+    // Konstruktor
+    public User() {}
+
+    public User(int idUser, String namaUser, String password, String peran, String noHp) {
+        this.idUser = idUser;
+        this.namaUser = namaUser;
+        this.password = password;
+        this.peran = peran;
+        this.noHp = noHp;
+    }
+
+    // Getter and Setter
+    public int getIdUser() { return idUser; }
+    public void setIdUser(int idUser) { this.idUser = idUser; }
+
+    public String getNamaUser() { return namaUser; }
+    public void setNamaUser(String namaUser) { this.namaUser = namaUser; }
+
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
+
+    public String getPeran() { return peran; }
+    public void setPeran(String peran) { this.peran = peran; }
+
+    public String getNoHp() { return noHp; }
+    public void setNoHp(String noHp) { this.noHp = noHp; }
+
+    // Metode abstrak yang harus diimplementasikan oleh kelas turunan
+    public abstract int getId_user();
+}
 
 
 2. Inhertance
 
+   User.java
+
+   package model;
+
+public abstract class User {
+    private int idUser;
+    private String namaUser;
+    private String password;
+    private String peran;
+    private String noHp;
+
+    // Konstruktor
+    public User() {}
+
+    public User(int idUser, String namaUser, String password, String peran, String noHp) {
+        this.idUser = idUser;
+        this.namaUser = namaUser;
+        this.password = password;
+        this.peran = peran;
+        this.noHp = noHp;
+    }
+
+    // Getter and Setter
+    public int getIdUser() { return idUser; }
+    public void setIdUser(int idUser) { this.idUser = idUser; }
+
+    public String getNamaUser() { return namaUser; }
+    public void setNamaUser(String namaUser) { this.namaUser = namaUser; }
+
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
+
+    public String getPeran() { return peran; }
+    public void setPeran(String peran) { this.peran = peran; }
+
+    public String getNoHp() { return noHp; }
+    public void setNoHp(String noHp) { this.noHp = noHp; }
+
+    // Metode abstrak yang harus diimplementasikan oleh kelas turunan
+    public abstract int getId_user();
+}
+
+
+Petugas.java
+
+package model;
+
+public abstract class Petugas extends User {
+    private int idPetugas;
+    private String jabatan;
+
+    public Petugas() {}
+
+    public int getIdPetugas() { return idPetugas; }
+    public void setIdPetugas(int idPetugas) { this.idPetugas = idPetugas; }
+
+    public String getJabatan() { return jabatan; }
+    public void setJabatan(String jabatan) { this.jabatan = jabatan; }
+}
+
+
+masyarakat.java
+
+package model;
+
+public abstract class Masyarakat extends User {
+    private String nik;
+    private String email;
+
+    public Masyarakat() {}
+
+    public Masyarakat(String nik, String email) {
+        this.nik = nik;
+        this.email = email;
+    }
+
+    public String getNik() { return nik; }
+    public void setNik(String nik) { this.nik = nik; }
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+}
+
+
+
 3. Abstracttiob
+
+   User.java
+
+   package model;
+
+public abstract class User {
+    private int idUser;
+    private String namaUser;
+    private String password;
+    private String peran;
+    private String noHp;
+
+    // Konstruktor
+    public User() {}
+
+    public User(int idUser, String namaUser, String password, String peran, String noHp) {
+        this.idUser = idUser;
+        this.namaUser = namaUser;
+        this.password = password;
+        this.peran = peran;
+        this.noHp = noHp;
+    }
+
+    // Getter and Setter
+    public int getIdUser() { return idUser; }
+    public void setIdUser(int idUser) { this.idUser = idUser; }
+
+    public String getNamaUser() { return namaUser; }
+    public void setNamaUser(String namaUser) { this.namaUser = namaUser; }
+
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
+
+    public String getPeran() { return peran; }
+    public void setPeran(String peran) { this.peran = peran; }
+
+    public String getNoHp() { return noHp; }
+    public void setNoHp(String noHp) { this.noHp = noHp; }
+
+    // Metode abstrak yang harus diimplementasikan oleh kelas turunan
+    public abstract int getId_user();
+}
+
 
 4. Polymorphism
 
-6. Interface
+  Laporan.java
+
+  package model;
+
+import java.util.Date;
+
+public class Laporan {
+    private int idLaporan;
+    private int idPelapor;
+    private int idLokasi;
+    private Date tanggalLapor;
+    private String deskripsi;
+    private String fotoBukti;
+    private String statusLaporan;
+    private String jenisLaporan;
+
+    public int getIdLaporan() { return idLaporan; }
+    public void setIdLaporan(int idLaporan) { this.idLaporan = idLaporan; }
+
+    public int getIdPelapor() { return idPelapor; }
+    public void setIdPelapor(int idPelapor) { this.idPelapor = idPelapor; }
+
+    public int getIdLokasi() { return idLokasi; }
+    public void setIdLokasi(int idLokasi) { this.idLokasi = idLokasi; }
+
+    public Date getTanggalLapor() { return tanggalLapor; }
+    public void setTanggalLapor(Date tanggalLapor) { this.tanggalLapor = tanggalLapor; }
+
+    public String getDeskripsi() { return deskripsi; }
+    public void setDeskripsi(String deskripsi) { this.deskripsi = deskripsi; }
+
+    public String getFotoBukti() { return fotoBukti; }
+    public void setFotoBukti(String fotoBukti) { this.fotoBukti = fotoBukti; }
+
+    public String getStatusLaporan() { return statusLaporan; }
+    public void setStatusLaporan(String statusLaporan) { this.statusLaporan = statusLaporan; }
+
+    public String getJenisLaporan() { return jenisLaporan; }
+    public void setJenisLaporan(String jenisLaporan) { this.jenisLaporan = jenisLaporan; }
+
+    // Metode yang akan dioverride di subclass
+    public void cetakLaporan() {
+        System.out.println("Mencetak laporan umum: " + this.jenisLaporan);
+    }
+}
+
+
+5. Interface
 
 
 
