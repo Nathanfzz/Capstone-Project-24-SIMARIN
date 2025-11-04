@@ -119,6 +119,21 @@ Aplikasi ini dikembangkan menggunakan prinsip Object-Oriented Programming (OOP) 
 
   - Keluar dari aplikasi
 
+=============================================================================
+
+**Penerapan OOP**
+
+1. Encapsulation
+
+
+
+2. Inhertance
+
+3. Abstracttiob
+
+4. Polymorphism
+
+6. Interface
 
 
 
@@ -142,13 +157,26 @@ Aplikasi ini dikembangkan menggunakan prinsip Object-Oriented Programming (OOP) 
 
 
 
+
+============================================================================
+
+Struktur Folder/Package
+
+<img width="348" height="897" alt="image" src="https://github.com/user-attachments/assets/b0378691-e4d9-4fe5-a07f-18df93504fd4" />
+
+<img width="274" height="315" alt="image" src="https://github.com/user-attachments/assets/d4eee1ab-d08a-4b39-8f1e-1d34e00ea69a" />
+
+
+<img width="336" height="626" alt="image" src="https://github.com/user-attachments/assets/0560e187-cbc8-45d2-8371-38654893e0c2" />
+
+<img width="357" height="481" alt="image" src="https://github.com/user-attachments/assets/e7acb085-4fdc-4525-86d2-ab3a956b5270" />
 
 
 
 
 --------------------------
 
-*Cara Menggunakan Program*  A1
+*Cara Menggunakan Program* 
 
 Cara Menggunakan Program (Menu Masyarakat)
 
@@ -298,6 +326,8 @@ Akan menampilkan tabel, jika ingin menghapus maka pilih colom dan baris yang mau
 
 Sistem menghapus data laporan tersebut
 
+
+==========================================================================================
 
 
 Cara Menggunakan Program (Menu Admin)
