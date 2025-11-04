@@ -121,7 +121,7 @@ Aplikasi ini dikembangkan menggunakan prinsip Object-Oriented Programming (OOP) 
 
 =============================================================================
 
-# **Penerapan OOP**
+# *Penerapan OOP*
 
 1. Encapsulation
 
@@ -376,7 +376,7 @@ public class Laporan {
 
 ============================================================================
 
-# Struktur Folder/Package
+# *Struktur Folder/Package*
 
 <img width="348" height="897" alt="image" src="https://github.com/user-attachments/assets/b0378691-e4d9-4fe5-a07f-18df93504fd4" />
 
