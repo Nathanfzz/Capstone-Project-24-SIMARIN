@@ -351,15 +351,187 @@ public class Laporan {
 
 5. Interface
 
+Interface adalah kontrak yang mendefinisikan metode yang harus diimplementasikan oleh kelas yang mengimplementasikan interface tersebut. Dalam kasus Anda, kita membuat interface LaporanInterface yang memiliki dua metode: cetakLaporan() dan simpanLaporan(). Metode-metode ini akan digunakan oleh kelas Laporan dan kelas turunannya seperti LaporanPenangkapanIkan dan LaporanPencemaran.
+
+LaporanInterface.java
+package model;
+
+public interface LaporanInterface {
+    // Metode yang harus diimplementasikan oleh kelas yang mengimplementasikan interface ini
+    void cetakLaporan();  // Mencetak laporan
+    void simpanLaporan(); // Menyimpan laporan
+}
+  - LaporanInterface mendefinisikan dua metode: cetakLaporan() dan simpanLaporan() yang wajib diimplementasikan oleh kelas yang mengimplementasikannya.
+
+  - LaporanInterface hanya mendefinisikan metode tanpa implementasi, agar kelas lain yang mengimplementasikannya bisa menyediakan implementasi spesifik untuk masing-masing metode.
 
 
+Class Laporan
 
+Di kelas Laporan, saya mengimplementasikan LaporanInterface karena Laporan adalah kelas yang mengatur laporan umum. Di sini kita menyediakan implementasi dari kedua metode yang ada di LaporanInterface.
 
+Laporan.java (Mengimplementasikan LaporanInterface)
 
+package model;
 
+import java.util.Date;
 
+public class Laporan implements LaporanInterface {
+    private int idLaporan;
+    private int idPelapor;
+    private int idLokasi;
+    private Date tanggalLapor;
+    private String deskripsi;
+    private String fotoBukti;
+    private String statusLaporan;
+    private String jenisLaporan;
 
+    // Konstruktor untuk Laporan
+    public Laporan(int idLaporan, int idPelapor, int idLokasi, Date tanggalLapor, String deskripsi, String fotoBukti, String statusLaporan, String jenisLaporan) {
+        this.idLaporan = idLaporan;
+        this.idPelapor = idPelapor;
+        this.idLokasi = idLokasi;
+        this.tanggalLapor = tanggalLapor;
+        this.deskripsi = deskripsi;
+        this.fotoBukti = fotoBukti;
+        this.statusLaporan = statusLaporan;
+        this.jenisLaporan = jenisLaporan;
+    }
 
+    // Implementasi metode cetakLaporan() dari LaporanInterface
+    @Override
+    public void cetakLaporan() {
+        System.out.println("Mencetak laporan umum: " + this.jenisLaporan);
+    }
+
+    // Implementasi metode simpanLaporan() dari LaporanInterface
+    @Override
+    public void simpanLaporan() {
+        System.out.println("Laporan dengan ID " + this.idLaporan + " berhasil disimpan.");
+    }
+
+    // Getter dan Setter untuk setiap atribut
+    public int getIdLaporan() { return idLaporan; }
+    public void setIdLaporan(int idLaporan) { this.idLaporan = idLaporan; }
+}
+
+  - Laporan mengimplementasikan LaporanInterface.
+
+  - cetakLaporan() dan simpanLaporan() sudah didefinisikan untuk memberikan implementasi spesifik pada kelas Laporan.
+
+Implementasi Interface di Kelas Turunan: LaporanPenangkapanIkan
+
+Kelas LaporanPenangkapanIkan adalah kelas turunan dari Laporan, yang juga mengimplementasikan LaporanInterface untuk menyediakan implementasi yang lebih spesifik terkait laporan penangkapan ikan. Kelas ini mewarisi metode cetakLaporan() dan simpanLaporan() dari Laporan, serta menambahkan fungsionalitas khusus seperti atribut jenisKapal, alatTangkap, dll.
+
+LaporanPenangkapanIkan.java (Mengimplementasikan LaporanInterface)
+package model;
+
+import java.sql.Date;
+
+public class LaporanPenangkapanIkan extends Laporan implements LaporanInterface {
+
+    private String jenisKapal;
+    private String alatTangkap;
+    private String zonaPenangkapan;
+    private String pelanggaran;
+
+    // Konstruktor untuk LaporanPenangkapanIkan
+    public LaporanPenangkapanIkan(int idLaporan, int idPelapor, int idLokasi, Date tanggalLapor, String deskripsi, String fotoBukti, String statusLaporan, String jenisLaporan, String jenisKapal, String alatTangkap, String zonaPenangkapan, String pelanggaran) {
+        super(idLaporan, idPelapor, idLokasi, tanggalLapor, deskripsi, fotoBukti, statusLaporan, jenisLaporan); // Memanggil konstruktor kelas induk
+        this.jenisKapal = jenisKapal;
+        this.alatTangkap = alatTangkap;
+        this.zonaPenangkapan = zonaPenangkapan;
+        this.pelanggaran = pelanggaran;
+    }
+
+    // Implementasi metode dari LaporanInterface
+    @Override
+    public void cetakLaporan() {
+        System.out.println("Mencetak laporan penangkapan ikan dengan ID: " + this.getIdLaporan());
+    }
+
+    @Override
+    public void simpanLaporan() {
+        System.out.println("Laporan Penangkapan Ikan dengan ID " + this.getIdLaporan() + " berhasil disimpan.");
+    }
+
+    // Getter dan Setter untuk atribut LaporanPenangkapanIkan
+    public String getJenisKapal() { return jenisKapal; }
+    public void setJenisKapal(String jenisKapal) { this.jenisKapal = jenisKapal; }
+
+    public String getAlatTangkap() { return alatTangkap; }
+    public void setAlatTangkap(String alatTangkap) { this.alatTangkap = alatTangkap; }
+
+    public String getZonaPenangkapan() { return zonaPenangkapan; }
+    public void setZonaPenangkapan(String zonaPenangkapan) { this.zonaPenangkapan = zonaPenangkapan; }
+
+    public String getPelanggaran() { return pelanggaran; }
+    public void setPelanggaran(String pelanggaran) { this.pelanggaran = pelanggaran; }
+}
+
+Penjelasan tentang Interface di LaporanPenangkapanIkan:
+
+  - LaporanPenangkapanIkan mengimplementasikan LaporanInterface.
+
+  - Kelas ini memiliki metode sendiri seperti cetakLaporan() dan simpanLaporan(), yang diperluas dari Laporan.
+
+  - Di kelas LaporanPenangkapanIkan, Anda mengubah implementasi dari metode cetakLaporan() dan simpanLaporan() untuk melayani kebutuhan laporan penangkapan ikan
+
+enggunaan Interface di Main.java
+
+Di Main.java, Anda bisa membuat objek LaporanPenangkapanIkan dan memanggil metode cetakLaporan() dan simpanLaporan().
+
+Main.java:
+package main;
+
+import model.LaporanPenangkapanIkan;
+import java.sql.Date;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input data untuk laporan
+        System.out.print("Masukkan ID Laporan: ");
+        int idLaporan = sc.nextInt();
+        sc.nextLine(); // Kosongkan buffer
+
+        System.out.print("Jenis Kapal: ");
+        String jenisKapal = sc.nextLine();
+
+        System.out.print("Alat Tangkap: ");
+        String alatTangkap = sc.nextLine();
+
+        System.out.print("Zona Penangkapan: ");
+        String zonaPenangkapan = sc.nextLine();
+
+        System.out.print("Pelanggaran: ");
+        String pelanggaran = sc.nextLine();
+
+        // Membuat objek LaporanPenangkapanIkan
+        LaporanPenangkapanIkan li = new LaporanPenangkapanIkan(
+            idLaporan, 123, 456, new Date(System.currentTimeMillis()), "Deskripsi laporan", "fotoBukti.jpg", "Tertunda", "Penangkapan Ikan",
+            jenisKapal, alatTangkap, zonaPenangkapan, pelanggaran
+        );
+
+        // Simpan laporan
+        System.out.println("Laporan Penangkapan Ikan telah disimpan.");
+        li.cetakLaporan();  // Memproses laporan
+
+        sc.close();
+    }
+}
+
+Ringkasan:
+
+  - LaporanInterface hanya mendefinisikan metode cetakLaporan() dan simpanLaporan().
+
+  - Laporan mengimplementasikan LaporanInterface dan menyediakan implementasi untuk metode tersebut.
+
+  - LaporanPenangkapanIkan mengimplementasikan LaporanInterface dan menyediakan implementasi spesifik untuk laporan penangkapan ikan.
+
+  - Main.java membuat objek LaporanPenangkapanIkan dan memanggil metode cetakLaporan() dan simpanLaporan().
 
 
 
