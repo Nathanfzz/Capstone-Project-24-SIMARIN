@@ -211,17 +211,27 @@ Jika memilih Penangkapan Ikan
 Ada Inputan Jenis kapal, Alat tankap, Zona penangkapan, pelanggaran
 
 
-✅ 2. Lihat Laporan
-
--
+2. Lihat Laporan
 
 Ketika pengguna memilih Lihat Laporan, sistem akan menampilkan pilihan jenis laporan:
+
+<img width="1488" height="771" alt="image" src="https://github.com/user-attachments/assets/b9f311fd-6e3b-42ae-a25a-0080ff9cd852" />
+
+Ada pilihan : 
 
 Laporan Pencemaran Laut
 
 Laporan Penangkapan Ikan Ilegal
 
-Setelah memilih, sistem menampilkan tabel laporan sesuai kategori disertai data tindak lanjut jika tersedia.
+Jika memilih pencemaran laut
+
+<img width="1499" height="772" alt="image" src="https://github.com/user-attachments/assets/21489444-a076-4f29-b777-bf9fc2ab3a8b" />
+
+Akan muncul tabel dan isi dari pencemaran laut
+
+Jika memilih Penangkapan Ikan
+
+Setelah memilih Pencemaran Laut 
 
 ✅ 3. Cari Laporan
 
