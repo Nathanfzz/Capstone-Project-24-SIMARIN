@@ -182,8 +182,6 @@ Setelah berhasil login, pengguna masuk ke Menu Masyarakat, yang terdiri dari:
 
 - Hapus Laporan
 
-- Logout
-
 1. Buat Laporan
 
 <img width="1490" height="779" alt="image" src="https://github.com/user-attachments/assets/1c9879d3-8f9f-4463-8ff4-0f3a5c9e6afd" />
@@ -284,14 +282,147 @@ Untuk menghapus laporan:
 
 <img width="1491" height="778" alt="image" src="https://github.com/user-attachments/assets/7589b047-d4cf-4769-b29f-1b258c300bbe" />
 
-Ada pilihan Hapus Akun Atau laporan
+Ada pilihan laporan pencemaran laut atau penangkapan ikan
 
+jika pilih hapuas laporan pencemaran laut
 
+<img width="1488" height="774" alt="image" src="https://github.com/user-attachments/assets/32d0d427-d344-4c4b-b2f6-b0196a681c2b" />
 
-Pilih jenis laporan
+Akan menampilkan tabel, jika ingin menghapus maka pilih colom dan baris yang mau dikirim lalu klik hapus
 
+jika pilih hapuas laporan penangkapan ikan
 
--
+<img width="1491" height="785" alt="image" src="https://github.com/user-attachments/assets/b3e035f5-1e69-4964-b5a2-1902ef10d4dd" />
+
+Akan menampilkan tabel, jika ingin menghapus maka pilih colom dan baris yang mau dikirim lalu klik hapus
 
 Sistem menghapus data laporan tersebut
+
+
+
+Cara Menggunakan Program (Menu Admin)
+
+Saat aplikasi dijalankan, pengguna akan diarahkan ke halaman awal yang berisi:
+
+
+Login dengan akun admin :
+
+<img width="1495" height="800" alt="image" src="https://github.com/user-attachments/assets/c7650a72-a08c-4922-ac3b-23d2e449c702" />
+
+
+Setelah berhasil login, pengguna masuk ke Menu Masyarakat, yang terdiri dari:
+
+<img width="1476" height="775" alt="image" src="https://github.com/user-attachments/assets/dbe442c5-f3c3-4c17-9404-f058f5976f7a" />
+
+- Buat Laporan
+
+- Lihat Laporan
+
+- Cari Laporan
+
+- Perbarui Laporan
+
+- Hapus Laporan
+
+- Tindak Lanjut
+
+  
+1. Buat Laporan
+
+<img width="1484" height="781" alt="image" src="https://github.com/user-attachments/assets/ce2779c1-45c8-4f44-b35c-6ba6dec6ab70" />
+
+Mengisi Lokasi laut dengan inputan nama lokasi, koordinat, wilayah, kondisi terakhir lalu klik next
+
+lokasi telah disimpan dan id terbuat otomatis
+
+Selanjutnya diarahkan ke jenis laporan :
+
+Laporan pencemaran laut dan juga laporan penangkapan ikan
+
+jika memilih laporan pencemaran laut
+
+<img width="1482" height="772" alt="image" src="https://github.com/user-attachments/assets/a0c52180-17eb-4b84-a091-88dceead577c" />
+
+Mengisi Jenis limbah, Sumber limbah, upload foto bukti, tingkat pencemaran lalu klik send
+
+Jika memilih laporan penangkapan ikan
+
+<img width="1482" height="772" alt="image" src="https://github.com/user-attachments/assets/ad2be7c4-76e2-4ec6-9cf2-0ecff5e6bb9f" />
+
+Mengisi Jenis kapal, alat penangkapan, oelanggaran, wilayah lalu klik send
+
+2. Lihat Laporan
+
+Jika kita memilih lihat laporan maka aka akan menampilkan lihat laporan, akun, lokasi laut, tindak lanjut
+
+<img width="1489" height="779" alt="image" src="https://github.com/user-attachments/assets/49a7b626-f3bc-4a87-9920-b33a0ac245ec" />
+
+Jika kita memilih laporan
+
+<img width="1498" height="786" alt="image" src="https://github.com/user-attachments/assets/7f297bff-33bd-40a4-9f9f-01a19847b668" />
+
+Akan muncul tabel dan data dari seluruh laporan yang ada
+
+dan jika kita bisa melihat foto bukti yang telah dikirim
+
+<img width="1627" height="1013" alt="image" src="https://github.com/user-attachments/assets/b007dd9d-03ba-403b-b523-0ee3b6d652cb" />
+
+
+Jika kita memilih Akun
+
+<img width="1485" height="770" alt="image" src="https://github.com/user-attachments/assets/d34d1578-b2b5-4159-a87c-b0847dba58dd" />
+
+Maka akan menampilkan akun yang ada
+
+Jika kita memilih lokasi laut
+
+<img width="1484" height="769" alt="image" src="https://github.com/user-attachments/assets/ff6b1382-81f0-499d-98fd-64d4178e99c3" />
+
+Akan menampilkan tabel dari lokasi laut 
+
+Jika kita memilih Tindak lanjut
+
+<img width="1478" height="780" alt="image" src="https://github.com/user-attachments/assets/9fa23f9c-e673-41ca-ab05-8b79b0a23e86" />
+
+Akan menampilkan tabel dari tindak lanjut
+
+3. Tindak Lanjut
+
+<img width="1476" height="773" alt="image" src="https://github.com/user-attachments/assets/4f4ec20a-f5bf-4b02-904a-d95a88d1d026" />
+
+Menampilkan tabel dari denda dan juga mengisi hasil denda, nominal denda dan juga status tindakan 
+
+4. Perbarui
+
+Di menu perbarui ada 2 jenis yang diperbarui ada akun dan laporan
+
+<img width="1475" height="778" alt="image" src="https://github.com/user-attachments/assets/52b1be6f-278b-4e90-94a1-4b9ba747d987" />
+
+Ditampilan perbarui laporan
+
+<img width="1494" height="781" alt="image" src="https://github.com/user-attachments/assets/e922211b-cea8-42f9-8a02-a3114b99dc98" />
+
+Perbarui status laporan apakah laporan tersebut menunggu, sedang ditindak atau selesai
+
+Ditampilan Perbarui Akun
+
+<img width="1491" height="774" alt="image" src="https://github.com/user-attachments/assets/513ff399-a8c7-43a7-91c7-d01e46390481" />
+
+Perbarui peran akun akun tersebut admin atau user
+
+5. Hapus
+
+Di menu hapus ada 2 jenis akun dan laporan
+
+Menu Laporan
+
+<img width="1500" height="778" alt="image" src="https://github.com/user-attachments/assets/36bf3b13-cdeb-492f-9da8-710f465a9734" />
+
+Pilih baris yang mau di hapus lalu klik tombol hapus
+
+Menu Akun
+
+<img width="1492" height="783" alt="image" src="https://github.com/user-attachments/assets/c2dada6f-7c5f-4abb-8cc4-77ee3f4f6a08" />
+
+Pilih baris akun yang mau dihapus lalu klik tombol hapus
 
